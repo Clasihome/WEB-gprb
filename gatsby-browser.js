@@ -1,0 +1,1 @@
+import './src/_styles/global.css';

@@ -1,0 +1,1 @@
+export { default as Rectangular } from './rectangular';
