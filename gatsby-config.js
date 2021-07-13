@@ -10,15 +10,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: false
+        displayName: false,
       },
     },
     {
-      resolve: 'gatsby-plugin-react-leaflet',
+      resolve: "gatsby-plugin-react-leaflet",
       options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      }
-    },        
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
     /*{
       resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {
@@ -30,14 +30,15 @@ module.exports = {
           },
         ],
       },
-    },*/    
+    },*/
+
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /_icons/
-        }
-      }
-    }    
+          include: /_icons/,
+        },
+      },
+    },
   ],
-}
+};
