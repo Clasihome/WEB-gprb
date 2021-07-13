@@ -98,7 +98,7 @@ export default () => {
                     <Col xs={12}>
                       <SubTitleFooter style={{ color: "#fff" }}>
                         También puede escribirnos a{" "}
-                        <MailSpan>ventas@leasy.cl</MailSpan>
+                        <MailSpan>giancarlo@gprb.cl</MailSpan>
                       </SubTitleFooter>
                     </Col>
                   </Row>
