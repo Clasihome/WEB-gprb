@@ -11,7 +11,7 @@ const CardCont = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid #ebebeb;
-  height: 500px;
+  max-height: 500px;
   transition: 250ms ease;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.108337);
   width: 100%;
@@ -22,8 +22,8 @@ const CardCont = styled.div`
       0px 4px 4px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.12),
       0px 16px 16px rgba(0, 0, 0, 0.12), 0px 32px 32px rgba(0, 0, 0, 0.12);
   }
-  @media (min-width: 768px) {
-    margin: 0 1rem;
+  @media (max-width: 768px) {
+    max-height: 1500px;
   }
 `;
 const CardImage = styled.div`

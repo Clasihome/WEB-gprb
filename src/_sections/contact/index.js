@@ -68,9 +68,11 @@ const ButtonContainer = styled.div`
 
 const SuccessText = styled.p`
   margin: 0;
+  background: #28a745;
   margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #28a745;
+  font-size: 1rem;
+  padding: 20px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,20 +109,19 @@ export default () => {
 
       const data = await fetch("/sendmail.php", options);
       const result = await data.text();
-      console.log("RESULT SENDMAIL", result);
+      console.log(result);
       if (result.includes("success")) {
-        console.log("MAIL API RESULT", result);
-        setLoading(false);
-        setSuccess(true);
-        setTimeout(() => {
-          setSuccess(false);
-        }, 5000);
         setValues({
           name: "",
           mobile: "",
           email: "",
           message: "",
         });
+        setLoading(false);
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 5000);
       }
       setLoading(false);
     } catch (e) {
@@ -202,15 +203,15 @@ export default () => {
                             <LoadingOutlined style={{ marginLeft: "1rem" }} />
                           )}
                         </Button>
-                        {success && (
-                          <SuccessText>
-                            Su mensaje fue enviado con éxito{" "}
-                            <CheckCircleFilled
-                              style={{ marginLeft: ".3rem" }}
-                            />
-                          </SuccessText>
-                        )}
                       </ButtonContainer>
+                    </Col>
+                    <Col xs={12}>
+                      {success && (
+                        <SuccessText>
+                          Su mensaje fue enviado con éxito{" "}
+                          <CheckCircleFilled style={{ marginLeft: ".3rem" }} />
+                        </SuccessText>
+                      )}
                     </Col>
                   </Row>
                 </Col>

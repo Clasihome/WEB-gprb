@@ -28,7 +28,7 @@ export default ({ noMargin }) => {
   return (
     <>
       <MainCont id='properties' noMargin={noMargin}>
-        <Container style={{ zIndex: -1 }}>
+        <Container>
           <Row>
             {state && state.items.lenght != 0 && (
               <>

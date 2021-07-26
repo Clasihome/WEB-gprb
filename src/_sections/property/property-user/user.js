@@ -62,9 +62,11 @@ const ContactFormButtons = styled.div`
 
 const SuccessText = styled.p`
   margin: 0;
+  background: #28a745;
   margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #28a745;
+  font-size: 1rem;
+  padding: 20px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,6 +120,7 @@ export default ({ description }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setSuccess(false);
     setLoading(true);
     try {
       const options = {
@@ -135,7 +138,6 @@ export default ({ description }) => {
       const result = await data.text();
 
       if (result === "success") {
-        console.log("MAIL API RESULT", result);
         setLoading(false);
         setSuccess(true);
         setValues({
