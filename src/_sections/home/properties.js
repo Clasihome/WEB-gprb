@@ -9,6 +9,7 @@ import { navigate } from "gatsby";
 const MainCont = styled.section`
   //margin-top: ${(props) => (props.noMargin ? "4rem" : "13rem")};
   padding: 4rem 0;
+  z-index: -999;
   @media(min-width:768px){
     padding: 4rem 0;
   }
@@ -27,7 +28,7 @@ export default ({ noMargin }) => {
   return (
     <>
       <MainCont id='properties' noMargin={noMargin}>
-        <Container>
+        <Container style={{ zIndex: -1 }}>
           <Row>
             {state && state.items.lenght != 0 && (
               <>

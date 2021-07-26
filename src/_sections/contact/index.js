@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import Context from "../../_context";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-grid-system";
 import { Input, Textarea } from "../../_components/inputs";
 import { Button } from "../../_components/buttons";
 import Map from "../../_components/map";
+import { CheckCircleFilled, LoadingOutlined } from "@ant-design/icons";
 
 const MainCont = styled.div`
   min-height: 80vh;
@@ -65,23 +66,85 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const SuccessText = styled.p`
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export default () => {
-  const { lat, lng } = useContext(Context).office;
+  const state = useContext(Context);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [values, setValues] = useReducer(
+    (current, next) => ({ ...current, ...next }),
+    {
+      name: "",
+      email: "",
+      mobile: "",
+      message: "",
+    }
+  );
+
+  const handleChange = (e) => {
+    setValues({ [e.target.id]: e.target.value });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const options = {
+        headers: { "Content-type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(values),
+        mode: "cors",
+      };
+
+      const data = await fetch("/sendmail.php", options);
+      const result = await data.text();
+      console.log("RESULT SENDMAIL", result);
+      if (result.includes("success")) {
+        console.log("MAIL API RESULT", result);
+        setLoading(false);
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 5000);
+        setValues({
+          name: "",
+          mobile: "",
+          email: "",
+          message: "",
+        });
+      }
+      setLoading(false);
+    } catch (e) {
+      setLoading(false);
+      console.log("error", e);
+    }
+  };
   return (
     <MainCont>
       <Container>
         <Row nogutter>
           <Col xs={12} md={12}>
             <Title>¿Dudas? ¿Consultas? Estamos aquí para ayudarlo</Title>
-            <Form onSubmit={(e) => e.preventDefault()}>
+            <Form onSubmit={onSubmit}>
               <Row>
                 <Col xs={12} md={6}>
                   <Row>
                     <Col xs={12}>
                       <Input
                         placeholder='Nombre'
+                        disabled={loading}
                         id='name'
-                        //gray
+                        onChange={handleChange}
+                        value={values.name}
                         vertical
                         shadow
                       />
@@ -89,8 +152,10 @@ export default () => {
                     <Col xs={12}>
                       <Input
                         placeholder='Teléfono'
-                        id='phone'
-                        //gray
+                        disabled={loading}
+                        id='mobile'
+                        onChange={handleChange}
+                        value={values.mobile}
                         vertical
                         shadow
                       />
@@ -108,27 +173,43 @@ export default () => {
                     <Col xs={12}>
                       <Input
                         placeholder='Email'
+                        disabled={loading}
                         id='email'
-                        //gray
+                        onChange={handleChange}
+                        value={values.email}
                         vertical
                         shadow
                       />
                     </Col>
                     <Col xs={12}>
                       <Textarea
+                        rows='7'
                         placeholder='Mensaje'
-                        id='message'
                         gray
-                        rows={7}
+                        disabled={loading}
+                        id='message'
+                        onChange={handleChange}
+                        value={values.message}
                         vertical
                         shadow
                       />
                     </Col>
                     <Col xs={12}>
                       <ButtonContainer>
-                        <Button block rounded>
+                        <Button block rounded disabled={loading}>
                           Enviar
+                          {loading && (
+                            <LoadingOutlined style={{ marginLeft: "1rem" }} />
+                          )}
                         </Button>
+                        {success && (
+                          <SuccessText>
+                            Su mensaje fue enviado con éxito{" "}
+                            <CheckCircleFilled
+                              style={{ marginLeft: ".3rem" }}
+                            />
+                          </SuccessText>
+                        )}
                       </ButtonContainer>
                     </Col>
                   </Row>
@@ -137,10 +218,10 @@ export default () => {
             </Form>
           </Col>
           <Col xs={12} md={12}>
-            {lat && (
+            {state.lat && (
               <Map
-                lat={parseFloat(lat)}
-                lng={parseFloat(lng)}
+                lat={parseFloat(state.lat)}
+                lng={parseFloat(state.lng)}
                 height={300}
                 zoom={3}
               />
