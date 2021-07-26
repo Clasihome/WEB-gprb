@@ -7,7 +7,6 @@ import { Rectangular } from "../../_components/banners";
 import { navigate } from "gatsby";
 
 const MainCont = styled.section`
-  min-height: 100vh;
   //margin-top: ${(props) => (props.noMargin ? "4rem" : "13rem")};
   padding: 4rem 0;
   @media(min-width:768px){
@@ -15,7 +14,7 @@ const MainCont = styled.section`
   }
 `;
 const Title = styled.h2`
-  //color: ${(props) => props.theme.main.primaryColor};
+  //color: ${(props) => props.theme.main.main.primaryColor};
   margin: 0;
   margin-bottom: 4rem;
   font-weight: 300;
@@ -26,26 +25,34 @@ const Title = styled.h2`
 export default ({ noMargin }) => {
   const state = useContext(Context).home.properties;
   return (
-    <MainCont id='properties' noMargin={noMargin}>
-      <Container>
-        <Row>
-          <Col xs={12} style={{ zIndex: "-1" }}>
-            <Title>{state.title}</Title>
-          </Col>
-          <Col xs={12}>
-            <PropertyCarousel />
-          </Col>
-          <Col xs={12}>
-            <Rectangular
-              image={state.bannerImage}
-              buttonText={state.buttonText}
-              title={state.footer}
-              icon='/icons/marker.svg'
-              onClick={() => navigate("/properties")}
-            />
-          </Col>
-        </Row>
-      </Container>
-    </MainCont>
+    <>
+      <MainCont id='properties' noMargin={noMargin}>
+        <Container>
+          <Row>
+            {state && state.items.lenght != 0 && (
+              <>
+                {console.log("state", state.items.length)}
+                <Col xs={12} style={{ zIndex: "-1" }}>
+                  <Title>{state.title}</Title>
+                </Col>
+
+                <Col xs={12}>
+                  <PropertyCarousel />
+                </Col>
+              </>
+            )}
+            <Col xs={12}>
+              <Rectangular
+                image={state.bannerImage}
+                buttonText={state.buttonText}
+                title={state.footer}
+                icon='/icons/marker.svg'
+                onClick={() => navigate("/properties")}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </MainCont>
+    </>
   );
 };

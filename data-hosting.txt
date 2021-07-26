@@ -1,0 +1,5 @@
+Usuario cPanel: gprbcl
+
+Contraseña: 8u53GPrX7qpW@/R*
+
+Servidor: hs32.ihosting.cl/cpanel

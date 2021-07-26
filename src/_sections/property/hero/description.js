@@ -18,7 +18,7 @@ const OperationCode = styled.p`
 `;
 const Title = styled.h1`
   font-weight: 300;
-  font-size: 50px;
+  font-size: 40px;
 `;
 const Price = styled(Title)`
   color: ${(props) => props.theme.main.primaryColor};
