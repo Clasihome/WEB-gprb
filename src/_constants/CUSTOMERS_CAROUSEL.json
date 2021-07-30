@@ -5,7 +5,7 @@
   },
   {
     "office": "agente inmobiliario",
-    "logo": "/customers/logo_alveal.jpg"
+    "logo": "/customers/logo_alveal.png"
   },
   {
     "office": "agente 365",
@@ -109,7 +109,7 @@
   },
   {
     "office": "capitalizarme rent",
-    "logo": "/customers/logo_ciudad_de_los_valles.jpg.jpg"
+    "logo": "/customers/logo_ciudad_de_los_valles.jpg"
   },
   {
     "office": "bascuñan propiedades",
@@ -121,7 +121,7 @@
   },
   {
     "office": "lw propiedades",
-    "logo": "/customers/logo_comercial_candelaria.jpg.jpg"
+    "logo": "/customers/logo_comercial_candelaria.jpg"
   },
   {
     "office": "mente propiedades",
@@ -153,7 +153,7 @@
   },
   {
     "office": "mente propiedades",
-    "logo": "/customers/logo_dartel.jpg"
+    "logo": "/customers/logo_dartel.png"
   },
   {
     "office": "mente propiedades",
@@ -163,8 +163,261 @@
     "office": "mente propiedades",
     "logo": "/customers/logo_dls.jpg"
   },
+
   {
-    "office": "mente propiedades",
+    "office": "bodega",
+    "logo": "/customers/logo_drouault_industrie.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_egakat.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_empack.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_envases_comersa.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_etiplas.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_fernando_mayer.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ferro_aceros.png"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_fortaleza.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_fresenius.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_global_data.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_global_storage.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_goldenfrost.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_guante.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_icofrut.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ingepack.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_invac.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ipark.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_jbtc.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_junji.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_k_vila.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_las_esteras.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_leonard_music.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_lo_echevers.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_logicentro.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_logistic_solutions.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_logisticasa.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_los_yacimientos.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_makila.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_marubeni.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_megacentro.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_metal_urbano.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_mgpanel.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_mi_bodega.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_monarch.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_multiespacios.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_nipon.png"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_novochile.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_nucleo_empresarial_rezepka.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ocasa.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_pentacrom.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_pesas_chile.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_pinturas_motta.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_portofino.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_pregel.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_prodrilling.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_puerto30.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_pyd.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_repmaq.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_rezepka.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_rodal.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ryle.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_sembrasol.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_soltec.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_spacioflex.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_texbag.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_tianel.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_tirreno.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_tramsalinas.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_transacevedo.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_transatenas.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_ulgini.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_work_center.jpg"
+  },
+  {
+    "office": "bodega",
+    "logo": "/customers/logo_yamaha.jpg"
+  },
+  {
+    "office": "bodega",
     "logo": "/customers/Mask_Group.png"
   }
 ]

@@ -270,7 +270,7 @@ export default () => {
       <FooterRightsCont>
         <Container>
           <FooterRights>
-            <li>2020 © Todos los derechos reservados</li>
+            <li>© Todos los derechos reservados</li>
             <li>
               Desarrollado por{" "}
               <DevelopBy

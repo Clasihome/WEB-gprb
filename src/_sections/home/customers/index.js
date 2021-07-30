@@ -30,7 +30,7 @@ export default ({ title }) => {
   return (
     <section className='very-main-cont'>
       <h2 className='title'>{title}</h2>
-      <div className='main-cont' id='elm'>
+      <div className='main-cont' style={{ height: "250px" }} id='elm'>
         {CUSTOMERS.map((item, i) => (
           <div key={uuid()} className='box'>
             <img src={item.logo} alt={item.office} className='logo' />
